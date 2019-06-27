@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>管理员登录页面</title>
+</head>
+<style type="text/css">
+table{
+	width:200px;
+	margin:0 auto;
+	padding: 6px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+input{
+	width:150px;
+	height:20px	
+}
+select{
+	width:100px;
+	height:20px
+}
+form{
+	text-align:center;
+}
+</style>
+
+<body>
+	<form action="logincheck.jsp" method="post">
+		<table>
+
+			<tr>
+				<td><h2>登录</h2></td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="username" placeholder="请输入用户名/学号"></br></br>
+					<input type="password" name="password" placeholder="请输入密码"></br></br>
+					身份：
+					<select name="role">
+						<option value="teacher">老师</option>
+						<option value="student">学生</option>
+					</select> </br></br>
+					<input type="submit" value="登录"  ></td>
+			</tr>
+		</table>
+	</form>
+
+
+</body>
+</html>
