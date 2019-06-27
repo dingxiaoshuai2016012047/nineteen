@@ -1,0 +1,140 @@
+@charset "UTF-8";
+div{
+	text-align:center;
+	height:50px;
+	background:#eee;
+}
+div a{
+	margin:20px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+form{
+	margin:10px;
+	margin-left:60%;
+}
+p {
+	margin: 20px 0;
+}
+
+/* 
+            Generic Styling, for Desktops/Laptops 
+            */
+
+table {
+	
+	margin:0 auto;
+	margin-top:20px;
+	width:65%;
+	border-collapse: collapse;
+	background: #fff
+}
+/* Zebra striping */
+tr:nth-of-type(odd) {
+	background: #eee;
+}
+
+th {
+	background: #eee;
+	font-weight: bold;
+}
+
+td, th {
+	padding: 6px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+a {
+	text-align: center;
+}
+
+@media only screen and (max-width: 760px) , ( min-device-width : 768px)
+	and (max-device-width: 1024px) {
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	tr {
+		border: 1px solid #ccc;
+	}
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		/*padding-left: 50%;*/
+	}
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+
+	/*
+                Label the data
+                */
+	td:nth-of-type(1):before {
+		content: "姓名";
+	}
+	td:nth-of-type(2):before {
+		content: "性别";
+	}
+	td:nth-of-type(3):before {
+		content: "出生年月";
+	}
+	td:nth-of-type(4):before {
+		content: "班级";
+	}
+	td:nth-of-type(5):before {
+		content: "语文";
+	}
+	td:nth-of-type(6):before {
+		content: "数学";
+	}
+	td:nth-of-type(7):before {
+		content: "外语";
+	}
+	td:nth-of-type(8):before {
+		content: "综合";
+	}
+	td:nth-of-type(9):before {
+		content: "总分";
+	}
+	td:nth-of-type(10):before {
+		content: "名次";
+	}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width
+	: 480px) {
+	body {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width:
+	1024px) {
+	body {
+		width: 100%;
+	}
+}
